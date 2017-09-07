@@ -1,6 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { routing }           from '../app/router/app.router';
+
+import { UsersModule }       from './users/users.module';
+
+import { routing }  from './app.routing';
+import { usersRouting }      from './users/users.routing';
 
 import { NavBarComponent }   from './navbar/navbar.component';
 import { AppComponent } from './app.component';
@@ -14,7 +18,9 @@ import { HomeComponent } from './home/home.component';
   ],
   imports: [
     BrowserModule,
-    routing 
+    routing,
+    usersRouting,
+    UsersModule
   ],
   providers: [],
   bootstrap: [AppComponent]
